@@ -9,9 +9,10 @@
     }
   },
   "scripts": {
-    "build": "svelte-package"
+    "build": "svelte-package",
+    "test": "vitest"
   },
-    "keywords": [
+  "keywords": [
     "interactive-video",
     "svelte",
     "svelte3",
@@ -39,7 +40,9 @@
   "devDependencies": {
     "@sveltejs/package": "^2.3.4",
     "@sveltejs/vite-plugin-svelte": "^6.1.2",
-    "svelte": "^3.59.2"
+    "jsdom": "^26.1.0",
+    "svelte": "^3.59.2",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "@interactive-video-labs/core": "^0.1.2"
