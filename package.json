@@ -2,12 +2,15 @@
   "name": "@interactive-video-labs/svelte",
   "version": "0.0.4",
   "description": "Thin Svelte wrapper for the @interactive-video-labs/core engine. Enables cue-based interactive video playback in Svelte applications.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -16,6 +19,7 @@
     "package.json",
     "README.md"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "svelte-package",
     "test": "vitest"
@@ -54,5 +58,8 @@
   },
   "peerDependencies": {
     "@interactive-video-labs/core": "^0.1.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

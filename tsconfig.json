@@ -2,22 +2,23 @@
   "compilerOptions": {
     "moduleResolution": "bundler",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "target": "es2020",
     "sourceMap": true,
     "declaration": true,
+    "declarationMap": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
+    "jsx": "preserve",
+    "resolveJsonModule": true
   },
   "include": [
-    "src/lib/**/*.ts"
+    "src/lib/**/*.ts",
+    "src/lib/**/*.svelte"
   ],
   "exclude": [
     "node_modules",
