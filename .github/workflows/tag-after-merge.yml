@@ -14,20 +14,45 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get version from package.json
-        id: pkg
+      - name: Get new version from package.json
         run: |
           VERSION=$(jq -r .version package.json)
           echo "version=$VERSION" >> $GITHUB_ENV
 
-      - name: Check if tag already exists
+      - name: Get last tag (if exists)
         run: |
-          if git rev-parse "v${{ env.version }}" >/dev/null 2>&1; then
-            echo "Tag v${{ env.version }} already exists, skipping."
-            exit 0
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          # strip leading "v" if present
+          LAST_TAG_STRIPPED=${LAST_TAG#v}
+          echo "last_tag=$LAST_TAG_STRIPPED" >> $GITHUB_ENV
+
+      - name: Check release type (skip patch)
+        run: |
+          NEW=${{ env.version }}
+          OLD=${{ env.last_tag }}
+
+          NEW_MAJOR=$(echo $NEW | cut -d. -f1)
+          NEW_MINOR=$(echo $NEW | cut -d. -f2)
+          NEW_PATCH=$(echo $NEW | cut -d. -f3)
+
+          OLD_MAJOR=$(echo $OLD | cut -d. -f1)
+          OLD_MINOR=$(echo $OLD | cut -d. -f2)
+          OLD_PATCH=$(echo $OLD | cut -d. -f3)
+
+          if [ "$NEW_MAJOR" -gt "$OLD_MAJOR" ]; then
+            echo "release_type=major" >> $GITHUB_ENV
+          elif [ "$NEW_MINOR" -gt "$OLD_MINOR" ]; then
+            echo "release_type=minor" >> $GITHUB_ENV
+          else
+            echo "release_type=patch" >> $GITHUB_ENV
           fi
 
+      - name: Skip if patch
+        if: env.release_type == 'patch'
+        run: echo "Patch release detected → no tag will be created."
+
       - name: Create and push git tag
+        if: env.release_type != 'patch'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
