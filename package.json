@@ -2,55 +2,23 @@
   "name": "@interactive-video-labs/svelte",
   "version": "0.0.1",
   "description": "Thin Svelte wrapper for the @interactive-video-labs/core engine. Enables cue-based interactive video playback in Svelte applications.",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "author": "Taj",
+  "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "svelte": "./dist/index.js"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --watch --format esm,cjs",
-    "test": "vitest run",
-    "clean": "rm -rf dist",
-    "prepare": "pnpm build"
+    "build": "svelte-package"
   },
-  "keywords": [
-    "interactive-video",
-    "svelte",
-    "svelte-component",
-    "typescript",
-    "video-player",
-    "cue-points",
-    "interactive-learning",
-    "svelte-wrapper"
-  ],
-  "author": "Taj",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/interactive-video-labs/interactive-video-svelte-wrapper.git"
+  "devDependencies": {
+    "@sveltejs/package": "^2.3.4",
+    "@sveltejs/vite-plugin-svelte": "^6.1.2",
+    "svelte": "^3.59.2"
   },
-  "homepage": "https://github.com/interactive-video-labs/interactive-video-svelte-wrapper#readme",
-  "bugs": {
-    "url": "https://github.com/interactive-video-labs/interactive-video-svelte-wrapper/issues"
-  },
-  "packageManager": "pnpm@10.13.1",
   "peerDependencies": {
-    "svelte": "^3.0.0",
     "@interactive-video-labs/core": "^0.1.2"
-  },
-  "dependencies": {
-    "jsdom": "^26.1.0",
-    "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
   }
 }

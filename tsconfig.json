@@ -1,19 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "lib": ["DOM", "ES2020"],
-    "types": ["vitest/globals"],
-    "allowJs": true,
-    "checkJs": false,
+    "moduleResolution": "bundler",
+    "module": "es2020",
+    "lib": ["es2020", "dom"],
+    "target": "es2020",
+    "sourceMap": true,
+    "declaration": true,
     "strict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "outDir": "dist",
-    "rootDir": "src"
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist","test"]
+  "include": ["src/lib/**/*.ts"]
 }
