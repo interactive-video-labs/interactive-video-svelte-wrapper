@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2] - 2025-08-17
+
+### Added
+
+- Configured Vitest for unit testing, including new dev dependencies, test script, and basic test file.
+
+### Changed
+
+- Updated package.json to specify module type and types entry.
+- Updated pnpm version in GitHub workflow configurations.
+
 ## [0.0.1] - 2025-08-17
 
 ### Added
