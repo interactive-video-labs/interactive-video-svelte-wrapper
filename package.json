@@ -1,6 +1,6 @@
 {
   "name": "@interactive-video-labs/svelte",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Thin Svelte wrapper for the @interactive-video-labs/core engine. Enables cue-based interactive video playback in Svelte applications.",
   "type": "module",
   "types": "./dist/index.d.ts",
