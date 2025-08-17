@@ -22,7 +22,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "svelte-package",
-    "test": "vitest"
+    "test": "vitest run",
+    "clean": "rimraf dist",
+    "prepare": "pnpm build"
   },
   "keywords": [
     "interactive-video",
@@ -53,6 +55,7 @@
     "@sveltejs/package": "^2.3.4",
     "@sveltejs/vite-plugin-svelte": "^6.1.2",
     "jsdom": "^26.1.0",
+    "rimraf": "^6.0.1",
     "svelte": "^3.59.2",
     "vitest": "^3.2.4"
   },
