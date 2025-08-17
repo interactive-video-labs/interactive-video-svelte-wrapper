@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2025-08-17
+## [0.0.1] - 2025-08-17
 
 ### Added
 
@@ -10,4 +10,4 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Converted the project from a Vue component to a Svelte action.
+- Converted the project from a Svelte component to a Svelte action.
