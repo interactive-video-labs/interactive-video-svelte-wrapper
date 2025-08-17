@@ -2,8 +2,6 @@
   "name": "@interactive-video-labs/svelte",
   "version": "0.0.1",
   "description": "Thin Svelte wrapper for the @interactive-video-labs/core engine. Enables cue-based interactive video playback in Svelte applications.",
-  "author": "Taj",
-  "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -12,6 +10,31 @@
   },
   "scripts": {
     "build": "svelte-package"
+  },
+    "keywords": [
+    "interactive-video",
+    "svelte",
+    "svelte3",
+    "svelte-component",
+    "typescript",
+    "video-player",
+    "cue-points",
+    "interactive-learning",
+    "svelte-wrapper"
+  ],
+  "author": "Taj",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/interactive-video-labs/interactive-video-svelte-wrapper.git"
+  },
+  "homepage": "https://github.com/interactive-video-labs/interactive-video-svelte-wrapper#readme",
+  "bugs": {
+    "url": "https://github.com/interactive-video-labs/interactive-video-svelte-wrapper/issues"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@sveltejs/package": "^2.3.4",
