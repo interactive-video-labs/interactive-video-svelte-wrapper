@@ -13,6 +13,29 @@
 
 Welcome to `@interactive-video-labs/svelte` — a lightweight Svelte wrapper around the `@interactive-video-labs/core` engine for cue-driven interactive video experiences.
 
-This wrapper enables seamless integration of interactive video players into Svelte applications using idiomatic Svelte components and bindings, while staying close to the underlying core engine API.
+This wrapper enables seamless integration of interactive video players into Svelte applications using idiomatic Svelte actions, while staying close to the underlying core engine API.
 
 ---
+
+## Installation
+
+```bash
+npm install @interactive-video-labs/svelte @interactive-video-labs/core
+```
+
+## Usage
+
+```svelte
+<script>
+  import { interactiveVideo } from '@interactive-video-labs/svelte';
+
+  let player;
+  const options = {
+    videoUrl: 'YOUR_VIDEO_URL',
+    // other options
+  };
+</script>
+
+<div use:interactiveVideo={options} bind:this={player}>
+</div>
+```
