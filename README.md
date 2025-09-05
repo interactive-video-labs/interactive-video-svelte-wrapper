@@ -1,4 +1,5 @@
 # @interactive-video-labs/svelte
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/interactive-video-labs/docs/main/logo.svg" width="200px" alt="Interactive Video Labs Logo" />
 </p>
@@ -79,15 +80,15 @@ Here’s a simple example of how to use the `<InteractiveVideo />` component in 
 
 ### Props
 
-| Prop               | Type                                                           | Required | Default | Description                                                                 |
-|--------------------|----------------------------------------------------------------|----------|---------|-----------------------------------------------------------------------------|
-| `videoUrl`         | `string`                                                       | `true`   | —       | The URL of the video to be loaded.                                          |
-| `cues`             | `CuePoint[]`                                                   | `false`  | `[]`    | An array of cue points for interactive events. Reactive/updated at runtime. |
-| `translations`     | `Translations`                                                 | `false`  | `{}`    | Translations for the player UI.                                             |
-| `autoplay`         | `boolean`                                                      | `false`  | `false` | Whether the video should start playing automatically.                       |
-| `loop`             | `boolean`                                                      | `false`  | `false` | Whether the video should loop.                                              |
-| `locale`           | `string`                                                       | `false`  | `'en'`  | The locale to be used for the player (e.g., `'en'`, `'es'`).                |
-| `bind:playerRef`   | `Player` (`@interactive-video-labs/core`)                      | `false`  | —       | Two-way bind to access the underlying core player instance.                 |
+| Prop             | Type                                      | Required | Default | Description                                                                 |
+| ---------------- | ----------------------------------------- | -------- | ------- | --------------------------------------------------------------------------- |
+| `videoUrl`       | `string`                                  | `true`   | —       | The URL of the video to be loaded.                                          |
+| `cues`           | `CuePoint[]`                              | `false`  | `[]`    | An array of cue points for interactive events. Reactive/updated at runtime. |
+| `translations`   | `Translations`                            | `false`  | `{}`    | Translations for the player UI.                                             |
+| `autoplay`       | `boolean`                                 | `false`  | `false` | Whether the video should start playing automatically.                       |
+| `loop`           | `boolean`                                 | `false`  | `false` | Whether the video should loop.                                              |
+| `locale`         | `string`                                  | `false`  | `'en'`  | The locale to be used for the player (e.g., `'en'`, `'es'`).                |
+| `bind:playerRef` | `Player` (`@interactive-video-labs/core`) | `false`  | —       | Two-way bind to access the underlying core player instance.                 |
 
 > Any additional attributes supported by `@interactive-video-labs/core` will be forwarded to the player configuration.
 
@@ -99,8 +100,14 @@ Player analytics/events are dispatched as a Svelte DOM event named `analyticsEve
 
 ```ts
 type AnalyticsDetail = {
-  event: 'PLAYER_LOADED' | 'VIDEO_STARTED' | 'VIDEO_PAUSED' | 'VIDEO_ENDED' |
-          'CUE_TRIGGERED' | 'INTERACTION_COMPLETED' | 'ERROR';
+  event:
+    | 'PLAYER_LOADED'
+    | 'VIDEO_STARTED'
+    | 'VIDEO_PAUSED'
+    | 'VIDEO_ENDED'
+    | 'CUE_TRIGGERED'
+    | 'INTERACTION_COMPLETED'
+    | 'ERROR';
   payload?: any;
 };
 ```
@@ -171,4 +178,3 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-

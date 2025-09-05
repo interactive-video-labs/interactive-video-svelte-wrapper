@@ -16,13 +16,6 @@
     "jsx": "preserve",
     "resolveJsonModule": true
   },
-  "include": [
-    "src/lib/**/*.ts",
-    "src/lib/**/*.svelte"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "tests"
-  ]
+  "include": ["src/lib/**/*.ts", "src/lib/**/*.svelte"],
+  "exclude": ["node_modules", "dist", "tests"]
 }
