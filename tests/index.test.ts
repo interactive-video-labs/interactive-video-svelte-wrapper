@@ -90,6 +90,9 @@ describe('InteractiveVideo Svelte Action', () => {
     update(newProps);
 
     expect(IVLabsPlayer.mock.results[0].value.loadCues).toHaveBeenLastCalledWith(newProps.cues);
-    expect(IVLabsPlayer.mock.results[0].value.loadTranslations).toHaveBeenLastCalledWith('en', newProps.translations);
+    expect(IVLabsPlayer.mock.results[0].value.loadTranslations).toHaveBeenLastCalledWith(
+      'en',
+      newProps.translations,
+    );
   });
 });

@@ -24,7 +24,9 @@
     "build": "svelte-package",
     "test": "vitest run",
     "clean": "rimraf dist",
-    "prepare": "pnpm build"
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepare": "pnpm lint --fix && pnpm format && pnpm build "
   },
   "keywords": [
     "interactive-video",
@@ -52,6 +54,14 @@
     "access": "public"
   },
   "devDependencies": {
+    "prettier": "^3.6.2",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.34.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "@sveltejs/package": "^2.3.4",
     "@sveltejs/vite-plugin-svelte": "^6.1.2",
     "jsdom": "^26.1.0",

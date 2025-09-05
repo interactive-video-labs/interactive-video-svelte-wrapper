@@ -22,7 +22,7 @@ Before contributing, please take a moment to review this document. It outlines t
 
 ## Code of Conduct
 
-This project adheres to the [CODE\_OF\_CONDUCT.md](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [insert contact email or method here, e.g., `support@example.com`].
+This project adheres to the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [insert contact email or method here, e.g., `support@example.com`].
 
 ## How Can I Contribute?
 
@@ -100,4 +100,3 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0
 ## License
 
 By contributing to `@interactive-video-labs/svelte`, you agree that your contributions will be licensed under its MIT License. See the [LICENSE](LICENSE) file for details.
-
