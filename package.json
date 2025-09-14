@@ -49,7 +49,7 @@
   "bugs": {
     "url": "https://github.com/interactive-video-labs/interactive-video-svelte-wrapper/issues"
   },
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.1",
   "publishConfig": {
     "access": "public"
   },
