@@ -20,7 +20,7 @@ importers:
         version: 9.35.0
       '@sveltejs/package':
         specifier: ^2.3.4
-        version: 2.5.1(svelte@5.38.10)(typescript@5.9.2)
+        version: 2.5.2(svelte@5.38.10)(typescript@5.9.2)
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.1.2
         version: 6.1.4(svelte@5.38.10)(vite@7.1.2)
@@ -468,8 +468,8 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/package@2.5.1':
-    resolution: {integrity: sha512-n0XRW7H7rD2AbdDsTD1KjXBztU96eMMuxPYwL9C+ZS8H8M1mS5NgmqFaSe8wKR40RU1KjLsqSWMnzsxRfG2j+A==}
+  '@sveltejs/package@2.5.2':
+    resolution: {integrity: sha512-9zhPSxHKQ3xm6q/QFsZmZPI9Q8V53prJXA4BXWEo5p92DUQ6NB7QWa0X8xGOoZO3ee3yckTsuMMjtS/58EMHWw==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     peerDependencies:
@@ -1786,7 +1786,7 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  '@sveltejs/package@2.5.1(svelte@5.38.10)(typescript@5.9.2)':
+  '@sveltejs/package@2.5.2(svelte@5.38.10)(typescript@5.9.2)':
     dependencies:
       chokidar: 4.0.3
       kleur: 4.1.5
