@@ -70,7 +70,7 @@
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "@interactive-video-labs/core": "^0.1.2"
+    "@interactive-video-labs/core": "^0.1.2 || ^0.2.0"
   },
   "engines": {
     "node": ">=18"
