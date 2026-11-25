@@ -1,0 +1,4 @@
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - '@interactive-video-labs/core@0.3.0 || 0.3.1'
